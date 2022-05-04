@@ -16,7 +16,7 @@ class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
   @override
   Widget build(BuildContext context) {
-    final questions = [
+    const questions = [
       {
         "text": "What's your favorite color?",
         "answers": ["Black", "Red", "Green", "White"]
@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
       setState(() {
         // ignore: todo
         // TODO Temporary
-        _questionIndex = (_questionIndex + 1) % 2;
+        _questionIndex = (_questionIndex + 1) % questions.length;
       });
     }
 
